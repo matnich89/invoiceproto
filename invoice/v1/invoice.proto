@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-option go_package = "/gen/go/invoice/v1;invoicepb";
+package invoice.v1;
+
+option go_package = "github.com/matnich89/invoiceproto/gen/go/invoice/v1;invoicepb";
 
 message Invoice {
     string client = 1;

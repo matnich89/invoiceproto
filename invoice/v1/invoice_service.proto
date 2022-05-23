@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package invoice.v1;
+
+option go_package = "github.com/matnich89/invoiceproto/gen/go/invoice/v1;invoicepb";
+
+import "invoice/v1/invoice.proto";
+
+service InvoiceService {
+  rpc SendData(SendDataRequest) returns (SendDataResponse) {};
+}
+
+message SendDataRequest {
+  Invoice data = 1;
+}
+
+message SendDataResponse {
+  int32  status = 1;
+}
