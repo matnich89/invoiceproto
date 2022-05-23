@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "/gen/go/invoice/v1;invoicepb";
+
+message Invoice {
+    string client = 1;
+    string address = 2;
+    string rate = 3;
+    string total = 4;
+    string date = 5;
+    string invoice_number = 6;
+    repeated InvoiceRow rows = 7;
+
+}
+
+message InvoiceRow {
+  string dates = 1;
+  string desc = 2;
+  string hours = 3;
+  string rate = 4;
+  string amount = 5;
+}
